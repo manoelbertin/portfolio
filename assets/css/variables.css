@@ -1,0 +1,74 @@
+/* variables.css - Design Tokens (MUITO IMPORTANTE!) */
+:root {
+    /* === CORES === */
+    --color-primary: #6C63FF;
+    --color-primary-dark: #5A52D5;
+    --color-primary-light: #8B85FF;
+    
+    --color-bg: #0F0F1A;
+    --color-bg-secondary: #1A1A2E;
+    --color-bg-card: #16213E;
+    
+    --color-text: #E4E4E7;
+    --color-text-secondary: #A1A1AA;
+    --color-text-muted: #71717A;
+    
+    --color-border: #27272A;
+    --color-success: #22C55E;
+    --color-error: #EF4444;
+    
+    /* === TIPOGRAFIA === */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-size-xs: 1.2rem;
+    --font-size-sm: 1.4rem;
+    --font-size-base: 1.6rem;
+    --font-size-lg: 1.8rem;
+    --font-size-xl: 2.4rem;
+    --font-size-2xl: 3.2rem;
+    --font-size-3xl: 4.8rem;
+    --font-size-hero: 6.4rem;
+    
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* === ESPAÇAMENTO === */
+    --spacing-xs: 0.4rem;
+    --spacing-sm: 0.8rem;
+    --spacing-md: 1.6rem;
+    --spacing-lg: 2.4rem;
+    --spacing-xl: 3.2rem;
+    --spacing-2xl: 4.8rem;
+    --spacing-3xl: 6.4rem;
+    --spacing-section: 9.6rem;
+    
+    /* === BORDAS === */
+    --radius-sm: 0.4rem;
+    --radius-md: 0.8rem;
+    --radius-lg: 1.2rem;
+    --radius-xl: 1.6rem;
+    --radius-full: 50%;
+    
+    /* === SOMBRAS === */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 20px rgba(108, 99, 255, 0.3);
+    
+    /* === TRANSIÇÕES === */
+    --transition-fast: 150ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 500ms ease;
+    
+    /* === CONTAINER === */
+    --container-max: 120rem;
+    --container-padding: 2.4rem;
+    
+    /* === Z-INDEX === */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal: 400;
+    --z-tooltip: 500;
+}

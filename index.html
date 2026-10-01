@@ -1,0 +1,185 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Manoel - Desenvolvedor Web">
+    <title>Manoel Bertin | Desenvolvedor</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Dev<span>Portfólio</span></a>
+            <ul class="nav__list">
+                <li><a href="#home" class="nav__link active">Início</a></li>
+                <li><a href="#about" class="nav__link">Sobre</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#projects" class="nav__link">Projetos</a></li>
+                <li><a href="#contact" class="nav__link">Contato</a></li>
+            </ul>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero section" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <span class="hero__subtitle">Olá, eu sou</span>
+                    <h1 class="hero__title">Manoel Carlo</h1>
+                    <p class="hero__description">
+                        Desenvolvedor Web apaixonado por criar 
+                        experiências digitais incríveis.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="btn btn--primary">
+                            Ver Projetos
+                        </a>
+                        <a href="#contact" class="btn btn--outline">
+                            Contato
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="assets/images/profile.webp" 
+                         alt="Foto de Seu Nome"
+                         loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section__title">Sobre Mim</h2>
+                <p class="section__subtitle">Minha introdução</p>
+                <div class="about__content">
+                    <div class="about__info">
+                        <div class="about__box">
+                            <span class="about__box-number">3+</span>
+                            <span class="about__box-label">Anos de<br>Experiência</span>
+                        </div>
+                        <div class="about__box">
+                            <span class="about__box-number">5+</span>
+                            <span class="about__box-label">Projetos<br>Completos</span>
+                        </div>
+                    </div>
+                    <p class="about__description">
+                        Descrição sobre você, sua jornada e objetivos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section__title">Habilidades</h2>
+                <div class="skills__grid">
+                    <article class="skill__card">
+                        <div class="skill__icon">🌐</div>
+                        <h3 class="skill__title">Frontend</h3>
+                        <ul class="skill__list">
+                            <li>HTML & CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                        </ul>
+                    </article>
+                    <article class="skill__card">
+                        <div class="skill__icon">⚙️</div>
+                        <h3 class="skill__title">Backend</h3>
+                        <ul class="skill__list">
+                            <li>Ruby on Rails</li>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </article>
+                    <article class="skill__card">
+                        <div class="skill__icon">🛠️</div>
+                        <h3 class="skill__title">Ferramentas</h3>
+                        <ul class="skill__list">
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>Docker</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section__title">Projetos</h2>
+                <div class="projects__grid">
+                    <article class="project__card">
+                        <div class="project__image">
+                            <img src="assets/images/projects/project1.webp" 
+                                 alt="Projeto 1">
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Nome do Projeto</h3>
+                            <p class="project__description">
+                                Breve descrição do projeto.
+                            </p>
+                            <div class="project__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JS</span>
+                            </div>
+                            <div class="project__links">
+                                <a href="#" class="btn btn--small">Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section__title">Contato</h2>
+                <form class="contact__form" id="contact-form">
+                    <div class="form__group">
+                        <input type="text" name="name" 
+                               placeholder="Seu nome" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" name="email" 
+                               placeholder="Seu email" required>
+                    </div>
+                    <div class="form__group">
+                        <textarea name="message" rows="5" 
+                                  placeholder="Sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Manoel Bertin. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
