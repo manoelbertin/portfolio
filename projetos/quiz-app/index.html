@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevQuiz - Desafio de Conhecimento</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <main class="quiz-container">
+        
+        <!-- ================= TELA 1: CONFIGURAÇÃO / INÍCIO ================= -->
+        <section class="screen active" id="screenStart">
+            <header class="quiz-header">
+                <span class="badge">🧠 Desafio Trivia</span>
+                <h1>DevQuiz</h1>
+                <p>Teste seus conhecimentos com perguntas de diversas categorias!</p>
+            </header>
+
+            <div class="setup-form">
+                <div class="form-group">
+                    <label for="categorySelect">Categoria:</label>
+                    <select id="categorySelect">
+                        <option value="">Todas as categorias</option>
+                        <option value="computacao">Computação</option>
+                        <option value="historia">História</option>
+                        <option value="geografia">Geografia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="difficultySelect">Dificuldade:</label>
+                    <select id="difficultySelect">
+                        <option value="">Qualquer Dificuldade</option>
+                        <option value="easy">Fácil</option>
+                        <option value="medium">Médio</option>
+                        <option value="hard">Difícil</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="amountSelect">Quantidade de Perguntas:</label>
+                    <select id="amountSelect">
+                        <option value="5">5 Perguntas</option>
+                        <option value="10" selected>10 Perguntas</option>
+                        <option value="15">15 Perguntas</option>
+                    </select>
+                </div>
+
+                <div class="high-score-banner">
+                    🏆 Seu Recorde: <strong id="highScoreDisplay">0 pontos</strong>
+                </div>
+
+                <button class="btn btn-primary btn-block" id="btnStart">Começar Quiz</button>
+            </div>
+        </section>
+
+        <!-- ================= TELA 2: CARREGANDO (LOADING) ================= -->
+        <section class="screen" id="screenLoading">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p>Preparando suas perguntas...</p>
+            </div>
+        </section>
+
+        <!-- ================= TELA 3: JOGO ATIVO ================= -->
+        <section class="screen" id="screenGame">
+            <!-- Barra superior do jogo -->
+            <div class="game-header">
+                <div class="meta-info">
+                    <span class="category-pill" id="questionCategory">Categoria</span>
+                    <span class="difficulty-pill" id="questionDifficulty">Fácil</span>
+                </div>
+                
+                <div class="timer-container">
+                    <div class="timer-circle" id="timerCircle">
+                        <span id="timerText">15</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progresso -->
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="quiz-info-row">
+                <span id="questionCounter">Pergunta 1/10</span>
+                <span id="currentScore">Pontos: 0</span>
+            </div>
+
+            <!-- Pergunta -->
+            <h2 class="question-text" id="questionText">Carregando pergunta...</h2>
+
+            <!-- Opções de resposta -->
+            <div class="options-grid" id="optionsContainer">
+                <!-- Inseridas dinamicamente via JS -->
+            </div>
+
+            <div class="game-footer">
+                <button class="btn btn-primary" id="btnNext" disabled>Próxima Pergunta →</button>
+            </div>
+        </section>
+
+        <!-- ================= TELA 4: RESULTADO FINAL ================= -->
+        <section class="screen" id="screenResult">
+            <div class="result-content">
+                <div class="result-icon" id="resultIcon">🎉</div>
+                <h2>Quiz Concluído!</h2>
+                <p id="resultMessage">Excelente desempenho!</p>
+
+                <div class="result-stats">
+                    <div class="stat-card">
+                        <span class="stat-value" id="finalScore">0</span>
+                        <span class="stat-label">Pontuação Total</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" id="finalAccuracy">0%</span>
+                        <span class="stat-label">Precisão</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value" id="finalCorrect">0/10</span>
+                        <span class="stat-label">Acertos</span>
+                    </div>
+                </div>
+
+                <div class="result-buttons">
+                    <button class="btn btn-primary" id="btnRestart">Jogar Novamente</button>
+                    <button class="btn btn-outline" id="btnHome">Menu Principal</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TELA 5: TRATAMENTO DE ERRO ================= -->
+        <section class="screen" id="screenError">
+            <div class="error-content">
+                <div class="error-icon">⚠️</div>
+                <h2>Ops! Algo deu errado.</h2>
+                <p id="errorMessage">Não foi possível carregar as perguntas da API.</p>
+                <button class="btn btn-primary" id="btnRetry">Tentar Novamente</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
